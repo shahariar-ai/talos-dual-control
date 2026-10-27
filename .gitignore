@@ -1,0 +1,13 @@
+*.bak
+*.egg-info/
+*.pyc
+.env
+.pytest_cache/
+.streamlit/secrets.toml
+.venv/
+__pycache__/
+build/
+dist/
+talos_data*/
+talos_data/
+talos_live_test/

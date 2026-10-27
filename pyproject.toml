@@ -1,0 +1,25 @@
+[project]
+name = "talos-oversight"
+version = "0.1.0"
+description = "Dual control for AI agents: maker-checker, teller limits, hash-chained ledger and end-of-day reconciliation."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = ["openai>=1.40"]
+
+[project.optional-dependencies]
+dashboard = ["streamlit>=1.50", "pandas"]
+dev = ["pytest"]
+
+[project.scripts]
+talos = "talos.__main__:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["talos"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
